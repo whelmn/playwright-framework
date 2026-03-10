@@ -1,6 +1,8 @@
-class InventoryPage:
+from pages.base_page import BasePage
+
+class InventoryPage(BasePage):
     def __init__(self, page):
-        self.page = page
+        super().__init__(page)
 
     @property
     def find_product(self):
@@ -17,10 +19,6 @@ class InventoryPage:
     @property
     def remove_button(self):
         return self.page.get_by_role("button", name="Remove")
-
-    @property
-    def cart_badge(self):
-        return self.page.get_by_test_id("shopping-cart-badge")
 
     @property
     def get_inventory_dropdown(self):
