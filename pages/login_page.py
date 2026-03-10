@@ -14,6 +14,10 @@ class LoginPage:
     def login_button(self):
         return self.page.get_by_role("button", name="Login")
 
+    @property
+    def get_error_modal(self):
+        return self.page.get_by_test_id("error")
+
     def login(self, username, password):
         self.username_input.fill(username)
         self.password_input.fill(password)
