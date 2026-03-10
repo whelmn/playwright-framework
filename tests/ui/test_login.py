@@ -15,3 +15,18 @@ def test_locked_out_login(login_page, grab_json_file):
     login = LoginPage(login_page)
     login.login(grab_json_file["users"]["locked_out_user"]["username"], grab_json_file["users"]["locked_out_user"]["password"])
     expect(login.get_error_modal).to_have_text("Epic sadface: Sorry, this user has been locked out.")
+
+def test_blank_password(login_page, grab_json_file):
+    login = LoginPage(login_page)
+    login.login(username=grab_json_file["users"]["standard_user"]["username"])
+    expect(login.get_error_modal).to_have_text("Epic sadface: Password is required")
+
+def test_blank_username(login_page, grab_json_file):
+    login = LoginPage(login_page)
+    login.login(password=grab_json_file["users"]["standard_user"]["password"])
+    expect(login.get_error_modal).to_have_text("Epic sadface: Username is required")
+
+def test_blank_fields(login_page, grab_json_file):
+    login = LoginPage(login_page)
+    login.login()
+    expect(login.get_error_modal).to_have_text("Epic sadface: Username is required")

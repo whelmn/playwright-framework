@@ -18,7 +18,7 @@ class LoginPage:
     def get_error_modal(self):
         return self.page.get_by_test_id("error")
 
-    def login(self, username, password):
+    def login(self, username="", password=""):
         self.username_input.fill(username)
         self.password_input.fill(password)
         self.login_button.click()
