@@ -20,3 +20,5 @@ jobs:
         run: playwright install --with-deps
       - name: Run tests
         run: pytest
+        env:
+          REQRES_API_KEY: ${{ secrets.REQRES_API_KEY }}
