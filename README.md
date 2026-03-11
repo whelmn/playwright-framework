@@ -8,12 +8,12 @@ This is a test automation framework built with Playwright and pytest, covering U
 
 ## Tech Stack
 
-| Tool | Why I chose it                                                                                                                                                                                        |
-|---|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Python | It's readable, widely adopted in automation, and lets me write clean tests that non-technical teammates can understand.                                                                               |
-| Playwright | It auto-waits which reduces flakiness, it handles both UI and API testing in one tool, and it's actively maintained by Microsoft.                                    |
-| pytest | It's the industry standard for Python testing, has a clean fixture system for setup and teardown, and has first class Playwright integration via pytest-playwright.                                                                    |
-| GitHub Actions | It's built directly into GitHub, requires zero infrastructure to set up, and runs automatically on every push. For a project at this scale it's the right tool — Jenkins would be over-engineering it. |
+| Tool | Why I chose it                                                                                                                                                      |
+|---|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Python | It's readable, widely adopted in automation, and lets me write clean tests that non-technical teammates can understand.                                             |
+| Playwright | It auto-waits which reduces flakiness, it handles both UI and API testing in one tool, and it's actively maintained by Microsoft.                                   |
+| pytest | It's the industry standard for Python testing, has a clean fixture system for setup and teardown, and has first class Playwright integration via pytest-playwright. |
+| GitHub Actions | It's built directly into GitHub, requires zero infrastructure to set up, and runs automatically on every push. For a project at this scale it's the right tool.     |
 
 ## Framework Structure
 
